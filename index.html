@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
-            background-color: #121212;
-            color: #f5f5f5;
+            background-color: #F0F4F8; 
+            color: #102A43; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
@@ -40,17 +40,18 @@
             height: 80px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #d93025;
+            border: 2px solid #D93025; 
             margin-right: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         h1 {
             font-size: 3rem;
             margin: 0;
             letter-spacing: 2px;
+            color: #102A43;
         }
         .highlight {
-            color: #d93025;
+            color: #D93025; 
         }
         
         /* Social Icons */
@@ -59,43 +60,56 @@
             margin-bottom: 30px;
         }
         .social-icon {
-            color: #aaaaaa;
+            color: #334E68; 
             font-size: 1.8rem;
             margin: 0 12px;
             text-decoration: none;
             transition: color 0.3s ease, transform 0.2s ease;
         }
         .social-icon:hover {
-            color: #d93025;
+            color: #D93025; 
             transform: scale(1.1);
+        }
+
+        /* Hero Banner Styling */
+        .hero-banner {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #D1D9E6;
         }
 
         h2 {
             font-size: 1.5rem;
             font-weight: 400;
-            color: #aaaaaa;
+            color: #486581; 
             margin-bottom: 30px;
         }
         .mission-text {
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 30px;
-            background-color: #1e1e1e;
+            background-color: #FFFFFF;
             padding: 30px;
             border-radius: 8px;
-            border-left: 4px solid #d93025;
+            border-left: 4px solid #D93025; 
             text-align: left;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
         .story-section {
-            background-color: #161616;
+            background-color: #FFFFFF;
             padding: 40px;
             border-radius: 8px;
             margin-bottom: 40px;
             text-align: left;
-            border: 1px solid #333;
+            border: 1px solid #D1D9E6;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
         .story-section h3 {
-            color: #d93025;
+            color: #D93025; 
             margin-top: 0;
             font-size: 1.8rem;
             margin-bottom: 20px;
@@ -103,32 +117,60 @@
         .story-section p {
             font-size: 1.05rem;
             line-height: 1.7;
-            color: #dddddd;
+            color: #334E68; 
             margin-bottom: 15px;
         }
+
+        /* Clean CTA Button Section */
         .booking-section {
-            margin-top: 40px;
+            margin-top: 20px;
             margin-bottom: 60px;
             background-color: #ffffff;
             border-radius: 8px;
-            padding: 10px;
+            padding: 40px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 1px solid #D1D9E6;
         }
+        .booking-section h3 {
+            color: #102A43;
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .booking-btn {
+            background-color: #D93025;
+            color: #ffffff;
+            padding: 16px 32px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(217, 48, 37, 0.3);
+            margin-top: 10px;
+        }
+        .booking-btn:hover {
+            background-color: #B3241C;
+            transform: translateY(-2px);
+        }
+
         .disclaimer-box {
-            background-color: #1a1a1a;
-            border: 1px solid #333;
+            background-color: #E1E8F0; 
+            border: 1px solid #CBD5E1;
             border-radius: 8px;
             padding: 30px;
             text-align: left;
             margin-top: 50px;
         }
         .disclaimer-box h3 {
-            color: #d93025;
+            color: #D93025;
             margin-top: 0;
             font-size: 1.2rem;
         }
         .disclaimer-box p, .disclaimer-box li {
             font-size: 0.9rem;
-            color: #bbbbbb;
+            color: #486581;
             line-height: 1.6;
         }
         .disclaimer-box ol {
@@ -144,7 +186,7 @@
         
         <div class="header-section">
             <div class="title-wrapper">
-                <img src="/images/Headshot.jpg"BrokeBackDoc Logo" class="logo-img" onerror="this.style.display='none'">
+                <img src="images/head shot 2.jpg" alt="BrokeBackDoc Logo" class="logo-img" onerror="this.style.display='none'">
                 <h1>BrokeBack<span class="highlight">Doc</span></h1>
             </div>
             
@@ -152,9 +194,13 @@
                 <a href="https://www.instagram.com/brokebackdoc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com/brokebackdoc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.tiktok.com/@brokebackdoc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://x.com/BrokebackDoc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://za.pinterest.com/brokebackdoc33/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
                 <a href="https://www.youtube.com/@brokebackdoc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
+
+        <img src="images/banner.jpg" alt="BrokeBackDoc Hero Banner" class="hero-banner" onerror="this.style.display='none'">
 
         <h2>You don't have to navigate this alone.</h2>
         
@@ -172,13 +218,15 @@
             
             <p>I built this space to offer you a chance to discuss your feelings and your own journey. I can help translate the medical jargon so you actually understand your condition, but mostly, I am here to listen. While my personal battle is rooted in the spine, <strong>any sufferer of chronic pain is welcome here.</strong></p>
             
-            <p><em>[Note from Doc: If the prices of these sessions are a barrier, please don't let that stop you from reaching out. You can <a href="mailto:brokebackdoc33@gmail.com" style="color: #d93025; font-weight: bold; text-decoration: none;">send me an email</a> or <a href="https://wa.me/27787841339" target="_blank" rel="noopener noreferrer" style="color: #d93025; font-weight: bold; text-decoration: none;">message me on WhatsApp</a> to discuss special pricing, alternative times, or just to get more info.]</em></p>
+            <p><em>[Note from Doc: If the prices of these sessions are a barrier, please don't let that stop you from reaching out. You can <a href="mailto:brokebackdoc33@gmail.com" style="color: #D93025; font-weight: bold; text-decoration: none;">send me an email</a> or <a href="https://wa.me/27787841339" target="_blank" rel="noopener noreferrer" style="color: #D93025; font-weight: bold; text-decoration: none;">message me on WhatsApp</a> to discuss special pricing, alternative times, or just to get more info.]</em></p>
         </div>
         
         <div class="booking-section">
-            <div class="calendly-inline-widget" data-url="https://calendly.com/yousufmahomed/brokebackdoc?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <h3>Ready to talk?</h3>
+            <p style="color: #486581; margin-bottom: 20px;">Choose a 15, 30, or 60-minute session that works best for you.</p>
+            <a href="https://calendly.com/yousufmahomed" target="_blank" class="booking-btn">View Available Sessions</a>
         </div>
+        
         <div class="disclaimer-box">
             <h3>Professional Disclaimer & Scope of Service</h3>
             <p>The BrokeBackDoc Advisory & Mentorship sessions are designed to provide peer support, health system navigation, and mental resilience coaching based on lived experience and general medical knowledge.</p>
@@ -190,6 +238,10 @@
                 <li><strong>Emergencies:</strong> If you are experiencing a medical emergency (such as sudden loss of bowel/bladder control or acute paralysis), please contact your local emergency services immediately.</li>
             </ol>
             <p><em>By booking a session, you acknowledge that you understand the advisory nature of this mentorship.</em></p>
+        </div>
+    </div>
+</body>
+</html>
         </div>
     </div>
 </body>
