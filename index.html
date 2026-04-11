@@ -198,6 +198,77 @@
             color: #D93025;
             text-decoration: underline;
         }
+        /* Toolkit Section Styling */
+        .toolkit-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid #D1D9E6;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        .toolkit-section h3 {
+            color: #D93025;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .toolkit-intro {
+            font-size: 1.05rem;
+            color: #486581;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .product-card {
+            display: flex;
+            align-items: center;
+            background-color: #F0F4F8;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #CBD5E1;
+            gap: 20px;
+        }
+        .product-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #D1D9E6;
+        }
+        .product-info h4 {
+            margin: 0 0 10px 0;
+            color: #102A43;
+            font-size: 1.2rem;
+        }
+        .product-info p {
+            font-size: 0.95rem;
+            color: #334E68;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .affiliate-btn {
+            background-color: #334E68;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .affiliate-btn:hover {
+            background-color: #102A43;
+        }
+        
+        @media (max-width: 600px) {
+            .product-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -244,6 +315,19 @@
             <h3>Ready to talk?</h3>
             <p style="color: #486581; margin-bottom: 20px;">Choose a 15, 30, or 60-minute session that works best for you.</p>
             <a href="https://calendly.com/yousufmahomed" target="_blank" class="booking-btn">View Available Sessions</a>
+        </div>
+        <div class="toolkit-section">
+            <h3>My Pain Management Toolkit</h3>
+            <p class="toolkit-intro">I only recommend tools that I have personally used to survive the physical demands of reintegration. These are the non-negotiables.</p>
+            
+            <div class="product-card">
+                <img src="/images/product 1.jpg" alt="Vusign Lumbar Cushion" class="product-img" onerror="this.style.display='none'">
+                <div class="product-info">
+                    <h4>Vusign Ergonomic Lumbar Cushion</h4>
+                    <p>Standard chairs encourage a backward pelvic tilt, compressing the lower lumbar discs. This high-density memory foam prevents that tilt and actively offloads pressure from compromised nerve roots.</p>
+                    <a href="https://amzn.to/41o7G4n" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                </div>
+            </div>
         </div>
         
         <div class="disclaimer-box">
