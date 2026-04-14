@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | BrokeBackDoc</title>
+    <style>
+        body {
+            background-color: #F0F4F8;
+            color: #102A43;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #D1D9E6;
+        }
+        h1 {
+            color: #D93025;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        .last-updated {
+            text-align: center;
+            color: #486581;
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        h2 {
+            color: #102A43;
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #E1E8F0;
+            padding-bottom: 5px;
+        }
+        p {
+            color: #334E68;
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+        ul {
+            color: #334E68;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #D93025;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #B3241C;
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #486581;
+        }
+        .back-link:hover {
+            color: #D93025;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+        
+        <h1>Privacy Policy for BrokeBackDoc Mobile App</h1>
+        <div class="last-updated">Last Updated: April 12, 2026</div>
+
+        <h2>1. Introduction</h2>
+        <p>BrokeBackDoc ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we handle information in our mobile application.</p>
+
+        <h2>2. Information We Collect</h2>
+        <p>Our app does <strong>NOT</strong> collect, store, or transmit any personal information. The app is designed as an information and booking portal that connects you with external services.</p>
+
+        <h2>3. Third-Party Services</h2>
+        <p>Our app integrates with the following third-party services, each with their own privacy policies:</p>
+        <ul>
+            <li><strong>Calendly:</strong> Session booking is handled through Calendly. Please review <a href="https://calendly.com/privacy" target="_blank" rel="noopener noreferrer">Calendly's Privacy Policy</a>.</li>
+            <li><strong>WhatsApp:</strong> Direct messaging uses WhatsApp. Please review <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">WhatsApp's Privacy Policy</a>.</li>
+            <li><strong>Email:</strong> Email communication uses your device's default email client.</li>
+        </ul>
+
+        <h2>4. Permissions</h2>
+        <p>The app may request the following permissions:</p>
+        <ul>
+            <li><strong>Internet Access:</strong> To load content and connect to booking services.</li>
+            <li><strong>Camera:</strong> Currently not used but may be requested by system dependencies. No images are captured or stored.</li>
+        </ul>
+
+        <h2>5. Data Storage</h2>
+        <p>We do not store any user data on our servers. All content viewing and interactions are session-based and not retained.</p>
+
+        <h2>6. Analytics</h2>
+        <p>We do not use any analytics or tracking tools in this app.</p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>Our app is intended for general audiences and does not knowingly collect information from children under 13.</p>
+
+        <h2>8. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify users of any material changes by updating the "Last Updated" date.</p>
+
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:brokebackdoc33@gmail.com">brokebackdoc33@gmail.com</a></li>
+            <li><strong>Website:</strong> <a href="https://brokebackdoc.com" target="_blank" rel="noopener noreferrer">https://brokebackdoc.com</a></li>
+        </ul>
+
+        <h2>10. Your Rights</h2>
+        <p>Since we do not collect or store personal data, there is no data to access, modify, or delete. Your privacy is inherently protected by our no-data-collection approach.</p>
+    </div>
+
+</body>
+</html>
