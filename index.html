@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrokeBackDoc | Let's Talk</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
-   <meta name="p:domain_verify" content="1600cd2292627742e93636bf9ba323a9"/>
+    <meta name="p:domain_verify" content="1600cd2292627742e93636bf9ba323a9"/>
     <style>
         body {
             background-color: #F0F4F8; 
@@ -180,6 +180,7 @@
         .disclaimer-box li {
             margin-bottom: 10px;
         }
+        
         /* Footer Links */
         .footer-links {
             margin-top: 40px;
@@ -198,6 +199,7 @@
             color: #D93025;
             text-decoration: underline;
         }
+        
         /* Toolkit Section Styling */
         .toolkit-section {
             background-color: #ffffff;
@@ -221,21 +223,39 @@
             margin-bottom: 30px;
             text-align: center;
         }
+        
+        /* Toolkit Grid (Laptop View) */
+        .toolkit-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px;
+            margin-top: 30px;
+        }
         .product-card {
             display: flex;
+            flex-direction: column; 
             align-items: center;
             background-color: #F0F4F8;
-            padding: 20px;
+            padding: 25px 20px;
             border-radius: 8px;
             border: 1px solid #CBD5E1;
-            gap: 20px;
+            text-align: center;
+            height: 100%;
+            box-sizing: border-box;
         }
         .product-img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
+            width: 100%;
+            max-width: 180px;
+            height: auto;
             border-radius: 8px;
             border: 1px solid #D1D9E6;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; 
         }
         .product-info h4 {
             margin: 0 0 10px 0;
@@ -245,28 +265,62 @@
         .product-info p {
             font-size: 0.95rem;
             color: #334E68;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             line-height: 1.5;
+            flex-grow: 1;
         }
         .affiliate-btn {
             background-color: #334E68;
             color: #ffffff;
-            padding: 10px 20px;
+            padding: 12px 20px;
             font-size: 1rem;
             font-weight: bold;
             text-decoration: none;
             border-radius: 6px;
             display: inline-block;
             transition: background-color 0.3s ease;
+            width: 100%; 
+            box-sizing: border-box;
         }
         .affiliate-btn:hover {
             background-color: #102A43;
         }
         
-        @media (max-width: 600px) {
-            .product-card {
+        /* Mobile View: Transforms into a Sleek List */
+        @media (max-width: 768px) {
+            .toolkit-section {
+                padding: 20px 15px; /* Tighter padding on phone */
+            }
+            .toolkit-grid {
+                display: flex;
                 flex-direction: column;
-                text-align: center;
+                gap: 15px;
+            }
+            .product-card {
+                flex-direction: row; /* Image on left, text on right */
+                align-items: center;
+                text-align: left;
+                padding: 15px;
+            }
+            .product-img {
+                width: 80px;  /* Much smaller image */
+                height: 80px;
+                margin-bottom: 0;
+                margin-right: 15px;
+            }
+            .product-info h4 {
+                font-size: 1.05rem;
+                margin-bottom: 5px;
+            }
+            .product-info p {
+                font-size: 0.85rem;
+                margin-bottom: 10px;
+            }
+            .affiliate-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+                width: auto;
+                align-self: flex-start; /* Button only as wide as text */
             }
         }
     </style>
@@ -317,50 +371,58 @@
             <p style="color: #486581; margin-bottom: 20px;">Choose a 15, 30, or 60-minute session that works best for you.</p>
             <a href="https://calendly.com/yousufmahomed" target="_blank" class="booking-btn">View Available Sessions</a>
         </div>
+        
         <div class="toolkit-section">
             <h3>My Pain Management Toolkit</h3>
-            <p class="toolkit-intro">I only recommend tools that I have personally used to survive the physical demands of reintegration. These are the non-negotiables.</p>
+            <p class="toolkit-intro">Tools I personally use to survive the physical demands of reintegration.</p>
             
-            <div class="product-card">
-                <img src="/images/product 1.jpg" alt="Vusign Lumbar Cushion" class="product-img" onerror="this.style.display='none'">
-                <div class="product-info">
-                    <h4>Vusign Ergonomic Lumbar Cushion</h4>
-                    <p>Standard chairs encourage a backward pelvic tilt, compressing the lower lumbar discs. This high-density memory foam prevents that tilt and actively offloads pressure from compromised nerve roots.</p>
-                    <a href="https://amzn.to/41o7G4n" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
-                </div>
+            <div class="toolkit-grid">
+                
                 <div class="product-card">
-                <img src="/images/product2.1.jpg" alt="Cooling Relief Cream" class="product-img" onerror="this.style.display='none'">
-                <div class="product-info">
-                    <h4>Intensive Cooling Relief Cream</h4>
-                    <p>While severe spinal issues require deep medical management, the surrounding muscles often lock up in painful spasms to protect the injury. I use this cooling, intensive care cream to provide instant, soothing relief to those overworked muscles. It is effortless to apply and helps break the immediate pain cycle so you can focus on resting.</p>
-                    <a href="https://amzn.to/3PUGQ1k" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                    <img src="/images/product 1.jpg" alt="Vusign Lumbar Cushion" class="product-img" onerror="this.style.display='none'">
+                    <div class="product-info">
+                        <h4>Vusign Ergonomic Lumbar Cushion</h4>
+                        <p>High-density memory foam that actively offloads pressure from compromised nerve roots by preventing backward pelvic tilt.</p>
+                        <a href="https://amzn.to/41o7G4n" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                    </div>
                 </div>
-                <div class="product-card">
-                <img src="/images/erg chair 1.jpg" alt="Core Ergonomic Office Chair" class="product-img" onerror="this.style.display='none'">
-                <div class="product-info">
-                    <h4>Core Support Ergonomic Desk Chair</h4>
-                    <p>Returning to a desk job is one of the hardest phases of reintegration. A standard chair will compress your spine and trigger flare-ups. This is my recommended baseline defense. The highly customizable 2-way lumbar system protects your lower discs by preventing backward pelvic tilt, allowing you to actually focus on your work.</p>
-                    <a href="https://amzn.to/3Oy50hG" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <img src="/images/erg chair 2.jpg" alt="Upgraded Ergonomic Chair with Footrest" class="product-img" onerror="this.style.display='none'">
-                <div class="product-info">
-                    <h4>Premium Reintegration Chair (with Footrest)</h4>
-                    <p>If you are facing long, 8-hour shifts, baseline support might not be enough. This upgraded model provides total structural offloading. It adds a 4-way adjustable headrest to prevent neck strain and a built-in, shock-absorbing footrest. This footrest is crucial for dispersing downward pressure away from your injured pelvis during extended sitting.</p>
-                    <a href="https://amzn.to/3OabNxX" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
-                </div>
                 <div class="product-card">
-                <img src="/images/pain_patch.jpg" alt="Targeted Pain Relief Patches" class="product-img" onerror="this.style.display='none'">
-                <div class="product-info">
-                    <h4>Targeted Single-Use Pain Relief Patches</h4>
-                    <p>When a sudden flare-up hits, the resulting muscle spasms are often highly localized. Instead of immediately relying on oral medications that affect your entire system, I highly recommend using targeted topical relief. These single-use patches are incredibly convenient. You simply apply them directly to the source of the pain for continuous, soothing relief that helps break the spasm cycle. They are discreet under clothing and an absolute must-have for your daily emergency kit.</p>
-                    <a href="https://amzn.to/4egQGo7" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                    <img src="/images/product2.1.jpg" alt="Cooling Relief Cream" class="product-img" onerror="this.style.display='none'">
+                    <div class="product-info">
+                        <h4>Intensive Cooling Relief Cream</h4>
+                        <p>Provides instant, soothing relief to overworked muscles locked in painful spasms, helping break the immediate pain cycle.</p>
+                        <a href="https://amzn.to/3PUGQ1k" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                    </div>
                 </div>
-            </div>
-            </div>
-            </div>
+
+                <div class="product-card">
+                    <img src="/images/erg chair 1.jpg" alt="Core Ergonomic Office Chair" class="product-img" onerror="this.style.display='none'">
+                    <div class="product-info">
+                        <h4>Core Support Ergonomic Desk Chair</h4>
+                        <p>My recommended baseline defense for desk work. The 2-way lumbar system protects lower discs by keeping the spine neutral.</p>
+                        <a href="https://amzn.to/3Oy50hG" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="/images/erg chair 2.jpg" alt="Upgraded Ergonomic Chair with Footrest" class="product-img" onerror="this.style.display='none'">
+                    <div class="product-info">
+                        <h4>Premium Reintegration Chair</h4>
+                        <p>Total structural offloading for 8-hour shifts. Features a 4-way adjustable headrest and a shock-absorbing footrest to disperse downward pressure.</p>
+                        <a href="https://amzn.to/3OabNxX" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="/images/pain_patch.jpg" alt="Targeted Pain Relief Patches" class="product-img" onerror="this.style.display='none'">
+                    <div class="product-info">
+                        <h4>Targeted Pain Relief Patches</h4>
+                        <p>Highly localized, single-use patches for sudden flare-ups. Apply directly to the source of pain for continuous, soothing relief.</p>
+                        <a href="https://amzn.to/4egQGo7" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                    </div>
+                </div>
+
             </div>
         </div>
         
@@ -376,12 +438,12 @@
             </ol>
             <p><em>By booking a session, you acknowledge that you understand the advisory nature of this mentorship.</em></p>
         </div>
-    </div>
-   <div class="footer-links">
+        
+        <div class="footer-links">
             <a href="disclosure.html">Affiliate Disclosure</a> | 
             <a href="privacy.html">Privacy Policy</a>
         </div>
+        
     </div> 
 </body>
 </html>
-        
