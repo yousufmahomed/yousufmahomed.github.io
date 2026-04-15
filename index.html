@@ -204,61 +204,65 @@
         .toolkit-section {
             background-color: #ffffff;
             border-radius: 8px;
-            padding: 40px;
+            padding: 40px 20px;
             margin-bottom: 40px;
             border: 1px solid #D1D9E6;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            text-align: left;
+            text-align: center;
         }
         .toolkit-section h3 {
             color: #D93025;
             font-size: 1.8rem;
             margin-top: 0;
             margin-bottom: 15px;
-            text-align: center;
         }
         .toolkit-intro {
             font-size: 1.05rem;
             color: #486581;
-            margin-bottom: 30px;
-            text-align: center;
+            margin-bottom: 20px;
         }
-        
-        /* Toolkit Grid (Laptop View) */
-        .toolkit-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); 
-            gap: 20px;
-            margin-top: 30px;
+
+        /* Carousel Wrapper */
+        .carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.4s ease;
+            will-change: transform;
         }
         .product-card {
+            min-width: 100%;
+            box-sizing: border-box;
             display: flex;
-            flex-direction: column; 
+            flex-direction: column;
             align-items: center;
             background-color: #F0F4F8;
-            padding: 25px 20px;
+            padding: 30px 25px;
             border-radius: 8px;
             border: 1px solid #CBD5E1;
             text-align: center;
-            height: 100%;
-            box-sizing: border-box;
         }
         .product-img {
             width: 100%;
-            max-width: 180px;
-            height: auto;
+            max-width: 200px;
+            height: 200px;
             border-radius: 8px;
             border: 1px solid #D1D9E6;
             margin-bottom: 20px;
-            object-fit: cover;
+            object-fit: contain;
+            background: #fff;
         }
         .product-info {
             display: flex;
             flex-direction: column;
-            flex-grow: 1; 
+            align-items: center;
+            width: 100%;
         }
         .product-info h4 {
-            margin: 0 0 10px 0;
+            margin: 0 0 12px 0;
             color: #102A43;
             font-size: 1.2rem;
         }
@@ -266,61 +270,80 @@
             font-size: 0.95rem;
             color: #334E68;
             margin-bottom: 20px;
-            line-height: 1.5;
-            flex-grow: 1;
+            line-height: 1.6;
+            max-width: 560px;
         }
         .affiliate-btn {
             background-color: #334E68;
             color: #ffffff;
-            padding: 12px 20px;
+            padding: 12px 30px;
             font-size: 1rem;
             font-weight: bold;
             text-decoration: none;
             border-radius: 6px;
             display: inline-block;
             transition: background-color 0.3s ease;
-            width: 100%; 
-            box-sizing: border-box;
         }
         .affiliate-btn:hover {
             background-color: #102A43;
         }
-        
-        /* Mobile View: Transforms into a Sleek List */
+
+        /* Carousel Controls */
+        .carousel-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .carousel-btn {
+            background-color: #D93025;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .carousel-btn:hover {
+            background-color: #B3241C;
+            transform: scale(1.1);
+        }
+        .carousel-dots {
+            display: flex;
+            gap: 8px;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #CBD5E1;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .dot.active {
+            background-color: #D93025;
+        }
+        .carousel-counter {
+            font-size: 0.9rem;
+            color: #486581;
+            min-width: 50px;
+            text-align: center;
+        }
+
         @media (max-width: 768px) {
             .toolkit-section {
-                padding: 20px 15px; /* Tighter padding on phone */
-            }
-            .toolkit-grid {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-            }
-            .product-card {
-                flex-direction: row; /* Image on left, text on right */
-                align-items: center;
-                text-align: left;
-                padding: 15px;
+                padding: 20px 10px;
             }
             .product-img {
-                width: 80px;  /* Much smaller image */
-                height: 80px;
-                margin-bottom: 0;
-                margin-right: 15px;
-            }
-            .product-info h4 {
-                font-size: 1.05rem;
-                margin-bottom: 5px;
-            }
-            .product-info p {
-                font-size: 0.85rem;
-                margin-bottom: 10px;
-            }
-            .affiliate-btn {
-                padding: 8px 15px;
-                font-size: 0.9rem;
-                width: auto;
-                align-self: flex-start; /* Button only as wide as text */
+                max-width: 160px;
+                height: 160px;
             }
         }
     </style>
@@ -369,16 +392,145 @@
         <div class="booking-section">
             <h3>Ready to talk?</h3>
             <p style="color: #486581; margin-bottom: 20px;">Choose a 15, 30, or 60-minute session that works best for you.</p>
-            <a> href="https://calendly.com/yousufmahomed" target="_blank" class="booking-btn">View Available Sessions</a>
+            <a href="https://calendly.com/yousufmahomed" target="_blank" class="booking-btn">View Available Sessions</a>
         </div>
         
         <div class="toolkit-section">
             <h3>My Pain Management Toolkit</h3>
             <p class="toolkit-intro">Tools I personally use to survive the physical demands of reintegration.</p>
-            
-            <div class="toolkit-grid">
-                
-                <div class="product-card">
+
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+
+                    <div class="product-card">
+                        <img src="images/product 1.jpg" alt="Vusign Lumbar Cushion" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <div class="product-info">
+                            <h4>Vusign Ergonomic Lumbar Cushion</h4>
+                            <p>High-density memory foam that actively offloads pressure from compromised nerve roots by preventing backward pelvic tilt.</p>
+                            <a href="https://amzn.to/41o7G4n" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/product2.1.jpg" alt="Cooling Relief Cream" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <div class="product-info">
+                            <h4>Intensive Cooling Relief Cream</h4>
+                            <p>Provides instant, soothing relief to overworked muscles locked in painful spasms, helping break the immediate pain cycle.</p>
+                            <a href="https://amzn.to/3PUGQ1k" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/erg chair 1.jpg" alt="Core Ergonomic Office Chair" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <div class="product-info">
+                            <h4>Core Support Ergonomic Desk Chair</h4>
+                            <p>My recommended baseline defense for desk work. The 2-way lumbar system protects lower discs by keeping the spine neutral.</p>
+                            <a href="https://amzn.to/3Oy50hG" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/erg chair 2.jpg" alt="Upgraded Ergonomic Chair with Footrest" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <div class="product-info">
+                            <h4>Premium Reintegration Chair</h4>
+                            <p>Total structural offloading for 8-hour shifts. Features a 4-way adjustable headrest and a shock-absorbing footrest to disperse downward pressure.</p>
+                            <a href="https://amzn.to/3OabNxX" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/pain_patch.jpg" alt="Targeted Pain Relief Patches" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <div class="product-info">
+                            <h4>Targeted Pain Relief Patches</h4>
+                            <p>Highly localized, single-use patches for sudden flare-ups. Apply directly to the source of pain for continuous, soothing relief.</p>
+                            <a href="https://amzn.to/4egQGo7" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/cm1.jpg" alt="Heated Calf and Knee Compression Massager" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <div class="product-info">
+                            <h4>Heated Calf &amp; Knee Compression Massager</h4>
+                            <p>Deep heat therapy combined with active compression increases local blood flow and provides immense relief to overworked muscles, helping to temporarily quiet the nerve signals so you can actually rest.</p>
+                            <a href="https://amzn.to/4u6tqhB" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/itb1.jpg" alt="Extra Large Thermal Heating Pad" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <div class="product-info">
+                            <h4>Extra Large Thermal Heating Pad</h4>
+                            <p>Deep, consistent heat is essential for chronic muscle survival. This extra-large thermal pad covers a wide surface area, increasing blood flow and forcing overworked, guarding muscles to finally release so you can get some actual rest.</p>
+                            <a href="https://amzn.to/4mtXWit" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/hh1.1.jpg" alt="Heated Handheld Massage Gun" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <div class="product-info">
+                            <h4>Heated Handheld Massage Gun</h4>
+                            <p>Combines powerful deep-tissue percussion with a heated massage head for a more relaxing recovery experience. Multiple attachment heads, 20 speed levels, LED display, and USB-C charging make it a convenient daily recovery tool.</p>
+                            <a href="https://amzn.to/4sFocb7" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/hh1.6.jpg" alt="TOLOCO EM26 Percussion Massage Gun" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <div class="product-info">
+                            <h4>TOLOCO EM26 Luxury Percussion Massage Gun</h4>
+                            <p>This is the premium choice for serious recovery. The TOLOCO EM26 features a striking carbon fibre finish, 10 interchangeable professional-grade attachment heads, and a smart touch-sensitive LED speed dial — giving you surgical precision over your recovery. Whether you're targeting deep muscle knots, nerve-adjacent tension, or post-procedure stiffness, this gun delivers powerful, whisper-quiet percussion therapy that feels as luxurious as it looks.</p>
+                            <a href="https://amzn.to/4tf87KE" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn" aria-label="Previous">&#8592;</button>
+                <div class="carousel-dots" id="carouselDots"></div>
+                <span class="carousel-counter" id="carouselCounter">1 / 8</span>
+                <button class="carousel-btn" id="nextBtn" aria-label="Next">&#8594;</button>
+            </div>
+        </div>
+
+        <script>
+            const track = document.getElementById('carouselTrack');
+            const cards = track.querySelectorAll('.product-card');
+            const dotsContainer = document.getElementById('carouselDots');
+            const counter = document.getElementById('carouselCounter');
+            const total = cards.length;
+            let current = 0;
+
+            cards.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goTo(i));
+                dotsContainer.appendChild(dot);
+            });
+
+            function goTo(index) {
+                current = (index + total) % total;
+                track.style.transform = 'translateX(-' + (current * 100) + '%)';
+                document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+                counter.textContent = (current + 1) + ' / ' + total;
+            }
+
+            document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+            document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
+
+            let startX = 0;
+            track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+            track.addEventListener('touchend', e => {
+                const diff = startX - e.changedTouches[0].clientX;
+                if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+            });
+        </script>
+
+        </div>
+        
+        <div class="disclaimer-box">
                     <img src="/images/product 1.jpg" alt="Vusign Lumbar Cushion" class="product-img" onerror="this.style.display='none'">
                     <div class="product-info">
                         <h4>Vusign Ergonomic Lumbar Cushion</h4>
@@ -434,6 +586,14 @@
                         <h4>Extra Large Thermal Heating Pad</h4>
                         <p>When your spine is compromised, the surrounding muscles in your back and hips often lock up in agonizing spasms to protect the injury. While ice is useful for acute inflammation, deep, consistent heat is essential for chronic muscle survival. I use this extra-large thermal pad because it covers a wide surface area, increasing blood flow and forcing those overworked, guarding muscles to finally release so you can get some actual rest.</p>
                         <a href="https://amzn.to/4mtXWit" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="/images/hh1.1.jpg" alt="Heated Handheld Massage Gun" class="product-img" onerror="this.style.display='none'">
+                        <div class="product-info">
+                            <h4>Heated Handheld Massage Gun</h4>
+                            <p>This handheld massage gun combines powerful deep-tissue percussion with a heated massage head for a more relaxing recovery experience. With multiple attachment heads, adjustable speed levels, LED display, and USB-C charging, it’s a convenient way to ease muscle tension at home or on the go.</p>
+                            <a href="https://amzn.to/4sFocb7" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                        </div>
                     </div>
                 </div>
                 </div>
