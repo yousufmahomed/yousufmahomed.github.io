@@ -6,7 +6,9 @@
     <title>BrokeBackDoc | Let's Talk</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
     <meta name="p:domain_verify" content="1600cd2292627742e93636bf9ba323a9"/>
+    
     <style>
+        /* Base Styles */
         body {
             background-color: #F0F4F8; 
             color: #102A43; 
@@ -23,7 +25,7 @@
             width: 100%;
         }
         
-        /* Logo & Header Styling */
+        /* Header & Logo */
         .header-section {
             display: flex;
             flex-direction: column;
@@ -51,28 +53,24 @@
             letter-spacing: 2px;
             color: #102A43;
         }
-        .highlight {
-            color: #D93025; 
-        }
+        .highlight { color: #D93025; }
         
         /* Social Icons */
-        .social-links {
-            margin-top: 15px;
-            margin-bottom: 30px;
-        }
+        .social-links { margin: 15px 0 30px 0; }
         .social-icon {
             color: #334E68; 
             font-size: 1.8rem;
             margin: 0 12px;
             text-decoration: none;
-            transition: color 0.3s ease, transform 0.2s ease;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
         .social-icon:hover {
             color: #D93025; 
             transform: scale(1.1);
         }
 
-        /* Hero Banner Styling */
+        /* Banner */
         .hero-banner {
             width: 100%;
             max-height: 350px;
@@ -83,61 +81,24 @@
             border: 1px solid #D1D9E6;
         }
 
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: #486581; 
-            margin-bottom: 30px;
-        }
-        .mission-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 30px;
+        h2 { font-size: 1.5rem; font-weight: 400; color: #486581; margin-bottom: 30px; }
+
+        /* Text Sections */
+        .mission-text, .story-section, .booking-section, .toolkit-section, .disclaimer-box {
             background-color: #FFFFFF;
             padding: 30px;
             border-radius: 8px;
-            border-left: 4px solid #D93025; 
-            text-align: left;
+            border: 1px solid #D1D9E6;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .story-section {
-            background-color: #FFFFFF;
-            padding: 40px;
-            border-radius: 8px;
             margin-bottom: 40px;
             text-align: left;
-            border: 1px solid #D1D9E6;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        .story-section h3 {
-            color: #D93025; 
-            margin-top: 0;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-        }
-        .story-section p {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: #334E68; 
-            margin-bottom: 15px;
-        }
+        .mission-text { border-left: 4px solid #D93025; }
+        .story-section h3, .toolkit-section h3 { color: #D93025; font-size: 1.8rem; margin-top: 0; }
+        .story-section p { font-size: 1.05rem; line-height: 1.7; color: #334E68; margin-bottom: 15px; }
 
-        /* Clean CTA Button Section */
-        .booking-section {
-            margin-top: 20px;
-            margin-bottom: 60px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 40px 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border: 1px solid #D1D9E6;
-        }
-        .booking-section h3 {
-            color: #102A43;
-            font-size: 1.6rem;
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
+        /* Booking Button */
+        .booking-section { text-align: center; }
         .booking-btn {
             background-color: #D93025;
             color: #ffffff;
@@ -147,91 +108,24 @@
             text-decoration: none;
             border-radius: 8px;
             display: inline-block;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(217, 48, 37, 0.3);
-            margin-top: 10px;
         }
-        .booking-btn:hover {
-            background-color: #B3241C;
-            transform: translateY(-2px);
-        }
+        .booking-btn:hover { background-color: #B3241C; transform: translateY(-2px); }
 
-        .disclaimer-box {
-            background-color: #E1E8F0; 
-            border: 1px solid #CBD5E1;
-            border-radius: 8px;
-            padding: 30px;
-            text-align: left;
-            margin-top: 50px;
-        }
-        .disclaimer-box h3 {
-            color: #D93025;
-            margin-top: 0;
-            font-size: 1.2rem;
-        }
-        .disclaimer-box p, .disclaimer-box li {
-            font-size: 0.9rem;
-            color: #486581;
-            line-height: 1.6;
-        }
-        .disclaimer-box ol {
-            padding-left: 20px;
-        }
-        .disclaimer-box li {
-            margin-bottom: 10px;
-        }
-        
-        /* Footer Links */
-        .footer-links {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #CBD5E1;
-            font-size: 0.9rem;
-            width: 100%;
-        }
-        .footer-links a {
-            color: #486581;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-        .footer-links a:hover {
-            color: #D93025;
-            text-decoration: underline;
-        }
-        
-        /* Toolkit Section Styling */
-        .toolkit-section {
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 40px 20px;
-            margin-bottom: 40px;
-            border: 1px solid #D1D9E6;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        .toolkit-section h3 {
-            color: #D93025;
-            font-size: 1.8rem;
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-        .toolkit-intro {
-            font-size: 1.05rem;
-            color: #486581;
-            margin-bottom: 20px;
-        }
-
-        /* Carousel Wrapper */
+        /* --- TOOLKIT CAROUSEL (FIXED) --- */
+        .toolkit-section { text-align: center; }
         .carousel-wrapper {
             position: relative;
             overflow: hidden;
             width: 100%;
+            height: auto;
         }
         .carousel-track {
             display: flex;
             transition: transform 0.4s ease;
             will-change: transform;
+            align-items: flex-start; /* Fixes the large empty space issue */
         }
         .product-card {
             min-width: 100%;
@@ -240,39 +134,23 @@
             flex-direction: column;
             align-items: center;
             background-color: #F0F4F8;
-            padding: 30px 25px;
+            padding: 30px;
             border-radius: 8px;
             border: 1px solid #CBD5E1;
             text-align: center;
         }
         .product-img {
             width: 100%;
-            max-width: 200px;
-            height: 200px;
+            max-width: 180px;
+            height: 180px;
             border-radius: 8px;
-            border: 1px solid #D1D9E6;
             margin-bottom: 20px;
             object-fit: contain;
             background: #fff;
+            border: 1px solid #D1D9E6;
         }
-        .product-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        .product-info h4 {
-            margin: 0 0 12px 0;
-            color: #102A43;
-            font-size: 1.2rem;
-        }
-        .product-info p {
-            font-size: 0.95rem;
-            color: #334E68;
-            margin-bottom: 20px;
-            line-height: 1.6;
-            max-width: 560px;
-        }
+        .product-info h4 { margin: 0 0 12px 0; color: #102A43; font-size: 1.2rem; }
+        .product-info p { font-size: 0.95rem; color: #334E68; line-height: 1.6; margin-bottom: 20px; max-width: 500px; }
         .affiliate-btn {
             background-color: #334E68;
             color: #ffffff;
@@ -281,21 +159,12 @@
             font-weight: bold;
             text-decoration: none;
             border-radius: 6px;
-            display: inline-block;
-            transition: background-color 0.3s ease;
+            transition: background 0.3s;
         }
-        .affiliate-btn:hover {
-            background-color: #102A43;
-        }
+        .affiliate-btn:hover { background-color: #102A43; }
 
-        /* Carousel Controls */
-        .carousel-controls {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            margin-top: 20px;
-        }
+        /* Controls */
+        .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 20px; }
         .carousel-btn {
             background-color: #D93025;
             color: #fff;
@@ -303,91 +172,63 @@
             border-radius: 50%;
             width: 42px;
             height: 42px;
-            font-size: 1.2rem;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0;
         }
-        .carousel-btn:hover {
-            background-color: #B3241C;
-            transform: scale(1.1);
-        }
-        .carousel-dots {
-            display: flex;
-            gap: 8px;
-        }
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #CBD5E1;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .dot.active {
-            background-color: #D93025;
-        }
-        .carousel-counter {
-            font-size: 0.9rem;
-            color: #486581;
-            min-width: 50px;
-            text-align: center;
-        }
+        .dot { width: 10px; height: 10px; border-radius: 50%; background-color: #CBD5E1; cursor: pointer; }
+        .dot.active { background-color: #D93025; }
+        .carousel-counter { font-size: 0.9rem; color: #486581; min-width: 50px; }
+
+        /* Disclaimer & Footer */
+        .disclaimer-box { background-color: #E1E8F0; }
+        .disclaimer-box h3 { color: #D93025; font-size: 1.2rem; margin-top: 0; }
+        .disclaimer-box p, .disclaimer-box li { font-size: 0.9rem; color: #486581; line-height: 1.6; }
+        .footer-links { margin-top: 40px; padding: 20px 0; border-top: 1px solid #CBD5E1; font-size: 0.9rem; }
+        .footer-links a { color: #486581; text-decoration: none; margin: 0 10px; }
 
         @media (max-width: 768px) {
-            .toolkit-section {
-                padding: 20px 10px;
-            }
-            .product-img {
-                max-width: 160px;
-                height: 160px;
-            }
+            h1 { font-size: 2.2rem; }
+            .product-card { padding: 20px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         
-        <div class="header-section">
+        <header class="header-section">
             <div class="title-wrapper">
                 <img src="images/head shot 2.jpg" alt="BrokeBackDoc Logo" class="logo-img" onerror="this.style.display='none'">
                 <h1>BrokeBack<span class="highlight">Doc</span></h1>
             </div>
-            
-           <div class="social-links">
-                <a href="https://www.instagram.com/brokebackdoc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/brokebackdoc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.tiktok.com/@brokebackdoc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="https://x.com/BrokebackDoc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://za.pinterest.com/brokebackdoc33/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
-                <a href="https://www.youtube.com/@brokebackdoc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://open.spotify.com/show/7rV9KRWrnD98utyH5iJOYF?si=mkRpCngZR8uKuZ5xL8-n2A" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+            <div class="social-links">
+                <a href="https://www.instagram.com/brokebackdoc" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/brokebackdoc" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/@brokebackdoc" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                <a href="https://x.com/BrokebackDoc" target="_blank" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://za.pinterest.com/brokebackdoc33/" target="_blank" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                <a href="https://www.youtube.com/@brokebackdoc" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank" class="social-icon"><i class="fab fa-spotify"></i></a>
             </div>
-        </div>
+        </header>
 
-        <img src="images/banner.jpg" alt="BrokeBackDoc Hero Banner" class="hero-banner" onerror="this.style.display='none'">
+        <img src="images/banner.jpg" alt="BrokeBackDoc Banner" class="hero-banner" onerror="this.style.display='none'">
 
         <h2>You don't have to navigate this alone.</h2>
         
         <div class="mission-text">
-            <p>If you are exhausted by the daily, invisible marathon of chronic back and pain issues, I am here to listen. The medical system treats the physical body, but it rarely helps you understand the complex jargon, the mental toll, or how to practically rebuild your life.</p>
+            <p>If you are exhausted by the daily, invisible marathon of chronic back issues, I am here to listen. The medical system treats the physical body, but it rarely helps you understand the complex jargon, the mental toll, or how to practically rebuild your life.</p>
         </div>
 
-        <div class="story-section">
+        <section class="story-section">
             <h3>My Journey</h3>
             <p>For ten years, I served as an Emergency Physician and Head of Department. I had moderate back issues for about a year, but I pushed through. Then, one day on the job while seeing a patient, multiple discs herniated. I was left physically bent over, unable to stand straight until my first procedure in 2022.</p>
-            
-            <p>I have been through seven procedures since then. The most recent surgery was to remove massive amounts of scar tissue compressing my nerve root. I have suffered physically, but I know firsthand that the true weight of this pain cannot be understood by anyone who hasn't lived it. Constant, severe neuralgia isn't just physical pain; it is deeply tied to severe depression and dark places. It strips away the person you used to be.</p>
-            
-            <p>I use AI avatars now to help me connect more deeply with you. It allows me to maintain the high level of professionalism I held before my injury, and honestly, creating this space is therapeutic for me. I am still on my own journey, and I accept that it may never fully end.</p>
-            
-            <p>I built this space to offer you a chance to discuss your feelings and your own journey. I can help translate the medical jargon so you actually understand your condition, but mostly, I am here to listen. While my personal battle is rooted in the spine, <strong>any sufferer of chronic pain is welcome here.</strong></p>
-            
-            <p><em>[Note from Doc: If the prices of these sessions are a barrier, please don't let that stop you from reaching out. You can <a href="mailto:brokebackdoc33@gmail.com" style="color: #D93025; font-weight: bold; text-decoration: none;">send me an email</a> or <a href="https://wa.me/27787841339" target="_blank" rel="noopener noreferrer" style="color: #D93025; font-weight: bold; text-decoration: none;">message me on WhatsApp</a> to discuss special pricing, alternative times, or just to get more info.]</em></p>
-        </div>
+            <p>I have been through seven procedures since then. The most recent surgery was to remove massive amounts of scar tissue compressing my nerve root. Constant, severe neuralgia isn't just physical pain; it is deeply tied to the dark places pain takes you. It strips away the person you used to be.</p>
+            <p>I built this space to offer you a chance to discuss your feelings and your own journey. I can help translate the medical jargon so you actually understand your condition, but mostly, I am here to listen.</p>
+            <p><em>[Note from Doc: If prices are a barrier, please reach out via <a href="mailto:brokebackdoc33@gmail.com" style="color: #D93025; font-weight: bold; text-decoration: none;">Email</a> or <a href="https://wa.me/27787841339" target="_blank" style="color: #D93025; font-weight: bold; text-decoration: none;">WhatsApp</a>.]</em></p>
+        </section>
         
         <div class="booking-section">
             <h3>Ready to talk?</h3>
@@ -395,99 +236,55 @@
             <a href="https://calendly.com/yousufmahomed" target="_blank" class="booking-btn">View Available Sessions</a>
         </div>
         
-        <div class="toolkit-section">
+        <section class="toolkit-section">
             <h3>My Pain Management Toolkit</h3>
-            <p class="toolkit-intro">Tools I personally use to survive the physical demands of reintegration.</p>
+            <p style="color: #486581; margin-bottom: 20px;">Essential tools I personally use to manage the baseline.</p>
 
             <div class="carousel-wrapper">
                 <div class="carousel-track" id="carouselTrack">
-
+                    
                     <div class="product-card">
-                        <img src="images/product 1.jpg" alt="Vusign Lumbar Cushion" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <img src="images/product 1.jpg" alt="Lumbar Cushion" class="product-img">
                         <div class="product-info">
                             <h4>Vusign Ergonomic Lumbar Cushion</h4>
-                            <p>High-density memory foam that actively offloads pressure from compromised nerve roots by preventing backward pelvic tilt.</p>
-                            <a href="https://amzn.to/41o7G4n" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                            <p>High-density memory foam that offloads pressure from compromised nerve roots by preventing pelvic tilt.</p>
+                            <a href="https://amzn.to/41o7G4n" target="_blank" class="affiliate-btn">View on Amazon</a>
                         </div>
                     </div>
 
                     <div class="product-card">
-                        <img src="images/product2.1.jpg" alt="Cooling Relief Cream" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <img src="images/product2.1.jpg" alt="Relief Cream" class="product-img">
                         <div class="product-info">
                             <h4>Intensive Cooling Relief Cream</h4>
-                            <p>Provides instant, soothing relief to overworked muscles locked in painful spasms, helping break the immediate pain cycle.</p>
-                            <a href="https://amzn.to/3PUGQ1k" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                            <p>Provides instant relief to overworked muscles locked in painful spasms, helping break the immediate pain cycle.</p>
+                            <a href="https://amzn.to/3PUGQ1k" target="_blank" class="affiliate-btn">View on Amazon</a>
                         </div>
                     </div>
 
                     <div class="product-card">
-                        <img src="images/erg chair 1.jpg" alt="Core Ergonomic Office Chair" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <img src="images/erg chair 1.jpg" alt="Office Chair" class="product-img">
                         <div class="product-info">
                             <h4>Core Support Ergonomic Desk Chair</h4>
-                            <p>My recommended baseline defense for desk work. The 2-way lumbar system protects lower discs by keeping the spine neutral.</p>
-                            <a href="https://amzn.to/3Oy50hG" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                            <p>My recommended baseline defense for desk work. The 2-way lumbar system keeps the spine neutral.</p>
+                            <a href="https://amzn.to/3Oy50hG" target="_blank" class="affiliate-btn">View on Amazon</a>
                         </div>
                     </div>
 
                     <div class="product-card">
-                        <img src="images/erg chair 2.jpg" alt="Upgraded Ergonomic Chair with Footrest" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <img src="images/hw3.jpg" alt="Hot Water Bottle" class="product-img">
                         <div class="product-info">
-                            <h4>Premium Reintegration Chair</h4>
-                            <p>Total structural offloading for 8-hour shifts. Features a 4-way adjustable headrest and a shock-absorbing footrest to disperse downward pressure.</p>
-                            <a href="https://amzn.to/3OabNxX" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
+                            <h4>BrokeBackDoc Essential: Hot Water Bottle Set</h4>
+                            <p>Deep, penetrating heat to break through "muscle guarding." High-density ribbed walls ensure extended heat retention.</p>
+                            <a href="https://amzn.to/3QdoatM" target="_blank" class="affiliate-btn">View on Amazon</a>
                         </div>
                     </div>
 
                     <div class="product-card">
-                        <img src="images/pain_patch.jpg" alt="Targeted Pain Relief Patches" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
+                        <img src="images/hh1.6.jpg" alt="Massage Gun" class="product-img">
                         <div class="product-info">
-                            <h4>Targeted Pain Relief Patches</h4>
-                            <p>Highly localized, single-use patches for sudden flare-ups. Apply directly to the source of pain for continuous, soothing relief.</p>
-                            <a href="https://amzn.to/4egQGo7" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <img src="images/cm1.jpg" alt="Heated Calf and Knee Compression Massager" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
-                        <div class="product-info">
-                            <h4>Heated Calf &amp; Knee Compression Massager</h4>
-                            <p>Deep heat therapy combined with active compression increases local blood flow and provides immense relief to overworked muscles, helping to temporarily quiet the nerve signals so you can actually rest.</p>
-                            <a href="https://amzn.to/4u6tqhB" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <img src="images/itb1.jpg" alt="Extra Large Thermal Heating Pad" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
-                        <div class="product-info">
-                            <h4>Extra Large Thermal Heating Pad</h4>
-                            <p>Deep, consistent heat is essential for chronic muscle survival. This extra-large thermal pad covers a wide surface area, increasing blood flow and forcing overworked, guarding muscles to finally release so you can get some actual rest.</p>
-                            <a href="https://amzn.to/4mtXWit" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <img src="images/hh1.1.jpg" alt="Heated Handheld Massage Gun" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
-                        <div class="product-info">
-                            <h4>Heated Handheld Massage Gun</h4>
-                            <p>Combines powerful deep-tissue percussion with a heated massage head for a more relaxing recovery experience. Multiple attachment heads, 20 speed levels, LED display, and USB-C charging make it a convenient daily recovery tool.</p>
-                            <a href="https://amzn.to/4sFocb7" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <img src="images/hh1.6.jpg" alt="TOLOCO EM26 Percussion Massage Gun" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Image'">
-                        <div class="product-info">
-                            <h4>TOLOCO EM26 Luxury Percussion Massage Gun</h4>
-                            <p>This is the premium choice for serious recovery. The TOLOCO EM26 features a striking carbon fibre finish, 10 interchangeable professional-grade attachment heads, and a smart touch-sensitive LED speed dial — giving you surgical precision over your recovery. Whether you're targeting deep muscle knots, nerve-adjacent tension, or post-procedure stiffness, this gun delivers powerful, whisper-quiet percussion therapy that feels as luxurious as it looks.</p>
-                            <a href="https://amzn.to/4tf87KE" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
-                        </div>
-                        <div class="product-card">
-                            <img src="images/hw3.jpg" alt="Premium Ribbed Hot Water Bottle Set" class="product-img" onerror="this.src='https://placehold.co/150x150?text=Hot+Water+Bottle'">
-                            <div class="product-info">
-                                <h4>BrokeBackDoc Essential: Premium Ribbed Hot Water Bottle Set</h4>
-                                <p>In the ER, we call it "guarding"—the way your muscles aggressively lock up to protect a damaged spine. Standard heating pads often fail to provide the deep, moist heat required to penetrate those rigid muscle layers. This high-density, ribbed hot water bottle set is a foundational tool for breaking through protective spasms. Featuring thick, anti-explosion walls for extended heat retention and a textured surface to prevent skin irritation, it delivers the consistent thermal therapy necessary to calm a hypersensitive nervous system and manage your daily baseline.</p>
-                                <a href="https://amzn.to/3QdoatM" target="_blank" rel="noopener noreferrer" class="affiliate-btn">View on Amazon</a>
-                            </div>
+                            <h4>TOLOCO EM26 Luxury Massage Gun</h4>
+                            <p>Premium recovery tool with 10 heads and touch LED speed dial for surgical precision over muscle knots.</p>
+                            <a href="https://amzn.to/4tf87KE" target="_blank" class="affiliate-btn">View on Amazon</a>
                         </div>
                     </div>
 
@@ -495,74 +292,64 @@
             </div>
 
             <div class="carousel-controls">
-                <button class="carousel-btn" id="prevBtn" aria-label="Previous">&#8592;</button>
+                <button class="carousel-btn" id="prevBtn">←</button>
                 <div class="carousel-dots" id="carouselDots"></div>
-                <span class="carousel-counter" id="carouselCounter">1 / 8</span>
-                <button class="carousel-btn" id="nextBtn" aria-label="Next">&#8594;</button>
+                <span class="carousel-counter" id="carouselCounter">1 / 5</span>
+                <button class="carousel-btn" id="nextBtn">→</button>
             </div>
-        </div>
+        </section>
 
-        <script>
-            const track = document.getElementById('carouselTrack');
-            const cards = track.querySelectorAll('.product-card');
-            const dotsContainer = document.getElementById('carouselDots');
-            const counter = document.getElementById('carouselCounter');
-            const total = cards.length;
-            let current = 0;
-
-            cards.forEach((_, i) => {
-                const dot = document.createElement('div');
-                dot.classList.add('dot');
-                if (i === 0) dot.classList.add('active');
-                dot.addEventListener('click', () => goTo(i));
-                dotsContainer.appendChild(dot);
-            });
-
-            function goTo(index) {
-                current = (index + total) % total;
-                track.style.transform = 'translateX(-' + (current * 100) + '%)';
-                document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
-                counter.textContent = (current + 1) + ' / ' + total;
-            }
-
-            document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
-            document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
-
-            let startX = 0;
-            track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-            track.addEventListener('touchend', e => {
-                const diff = startX - e.changedTouches[0].clientX;
-                if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
-            });
-        </script>
-
-        </div>
-        
-       
-                </div>
-                </div>
-
-            </div>
-        </div>
-        
         <div class="disclaimer-box">
-            <h3>Professional Disclaimer & Scope of Service</h3>
-            <p>The BrokeBackDoc Advisory & Mentorship sessions are designed to provide peer support, health system navigation, and mental resilience coaching based on lived experience and general medical knowledge.</p>
-            <p><strong>Please Note:</strong></p>
-            <ol>
-                <li><strong>No Doctor-Patient Relationship:</strong> These sessions do not constitute a formal clinical doctor-patient relationship.</li>
-                <li><strong>Not Clinical Advice:</strong> I do not provide clinical diagnoses, medical prescriptions, or surgical recommendations during these sessions.</li>
-                <li><strong>Primary Care:</strong> All clinical decisions must be discussed with your primary treating physician or surgeon. This service is a supplement to—not a replacement for—professional medical care.</li>
-                <li><strong>Emergencies:</strong> If you are experiencing a medical emergency (such as sudden loss of bowel/bladder control or acute paralysis), please contact your local emergency services immediately.</li>
-            </ol>
-            <p><em>By booking a session, you acknowledge that you understand the advisory nature of this mentorship.</em></p>
+            <h3>Professional Disclaimer</h3>
+            <p>Mentorship sessions provide peer support and system navigation based on lived experience and general medical knowledge.</p>
+            <ul>
+                <li><strong>No Doctor-Patient Relationship:</strong> These sessions are not formal clinical consultations.</li>
+                <li><strong>Not Clinical Advice:</strong> I do not provide diagnoses or prescriptions.</li>
+                <li><strong>Emergencies:</strong> If experiencing acute loss of function, contact emergency services immediately.</li>
+            </ul>
         </div>
         
-        <div class="footer-links">
+        <footer class="footer-links">
             <a href="disclosure.html">Affiliate Disclosure</a> | 
             <a href="privacy.html">Privacy Policy</a>
-        </div>
+        </footer>
         
     </div> 
+
+    <script>
+        const track = document.getElementById('carouselTrack');
+        const cards = track.querySelectorAll('.product-card');
+        const dotsContainer = document.getElementById('carouselDots');
+        const counter = document.getElementById('carouselCounter');
+        const total = cards.length;
+        let current = 0;
+
+        // Generate Dots
+        cards.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goTo(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        function goTo(index) {
+            current = (index + total) % total;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+            counter.textContent = `${current + 1} / ${total}`;
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+        document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
+
+        // Touch Swipe
+        let startX = 0;
+        track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+        track.addEventListener('touchend', e => {
+            const diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+        });
+    </script>
 </body>
 </html>
