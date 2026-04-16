@@ -113,7 +113,7 @@
         }
         .booking-btn:hover { background-color: #B3241C; transform: translateY(-2px); }
 
-        /* --- TOOLKIT CAROUSEL (FIXED) --- */
+        /* --- TOOLKIT CAROUSEL (FIXED HEIGHT ISSUE) --- */
         .toolkit-section { text-align: center; }
         .carousel-wrapper {
             position: relative;
@@ -125,7 +125,7 @@
             display: flex;
             transition: transform 0.4s ease;
             will-change: transform;
-            align-items: flex-start; /* Fixes the large empty space issue */
+            align-items: flex-start; /* FIX: Prevents large empty space below cards */
         }
         .product-card {
             min-width: 100%;
@@ -271,20 +271,65 @@
                     </div>
 
                     <div class="product-card">
+                        <img src="images/erg chair 2.jpg" alt="Premium Footrest Chair" class="product-img">
+                        <div class="product-info">
+                            <h4>Premium Reintegration Chair</h4>
+                            <p>Total structural offloading for 8-hour shifts. Features a 4-way adjustable headrest and shock-absorbing footrest.</p>
+                            <a href="https://amzn.to/3OabNxX" target="_blank" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/pain_patch.jpg" alt="Pain Patches" class="product-img">
+                        <div class="product-info">
+                            <h4>Targeted Pain Relief Patches</h4>
+                            <p>Highly localized, single-use patches for sudden flare-ups. Apply directly to the source for continuous relief.</p>
+                            <a href="https://amzn.to/4egQGo7" target="_blank" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/cm1.jpg" alt="Compression Massager" class="product-img">
+                        <div class="product-info">
+                            <h4>Heated Calf & Knee Compression Massager</h4>
+                            <p>Deep heat therapy combined with active compression to increase blood flow and quiet overworked nerve signals.</p>
+                            <a href="https://amzn.to/4u6tqhB" target="_blank" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/itb1.jpg" alt="Heating Pad" class="product-img">
+                        <div class="product-info">
+                            <h4>Extra Large Thermal Heating Pad</h4>
+                            <p>Deep heat is essential for muscle survival. This XL pad covers wide surface areas to force muscles to release.</p>
+                            <a href="https://amzn.to/4mtXWit" target="_blank" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/hh1.1.jpg" alt="Heated Massage Gun" class="product-img">
+                        <div class="product-info">
+                            <h4>Heated Handheld Massage Gun</h4>
+                            <p>Combines deep-tissue percussion with a heated head. Features 20 speed levels and LED display for recovery.</p>
+                            <a href="https://amzn.to/4sFocb7" target="_blank" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/hh1.6.jpg" alt="Luxury Massage Gun" class="product-img">
+                        <div class="product-info">
+                            <h4>TOLOCO EM26 Luxury Massage Gun</h4>
+                            <p>Premium choice for recovery. 10 heads and touch LED speed dial for surgical precision over muscle knots.</p>
+                            <a href="https://amzn.to/4tf87KE" target="_blank" class="affiliate-btn">View on Amazon</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
                         <img src="images/hw3.jpg" alt="Hot Water Bottle" class="product-img">
                         <div class="product-info">
                             <h4>BrokeBackDoc Essential: Hot Water Bottle Set</h4>
                             <p>Deep, penetrating heat to break through "muscle guarding." High-density ribbed walls ensure extended heat retention.</p>
                             <a href="https://amzn.to/3QdoatM" target="_blank" class="affiliate-btn">View on Amazon</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <img src="images/hh1.6.jpg" alt="Massage Gun" class="product-img">
-                        <div class="product-info">
-                            <h4>TOLOCO EM26 Luxury Massage Gun</h4>
-                            <p>Premium recovery tool with 10 heads and touch LED speed dial for surgical precision over muscle knots.</p>
-                            <a href="https://amzn.to/4tf87KE" target="_blank" class="affiliate-btn">View on Amazon</a>
                         </div>
                     </div>
 
@@ -294,7 +339,7 @@
             <div class="carousel-controls">
                 <button class="carousel-btn" id="prevBtn">←</button>
                 <div class="carousel-dots" id="carouselDots"></div>
-                <span class="carousel-counter" id="carouselCounter">1 / 5</span>
+                <span class="carousel-counter" id="carouselCounter">1 / 10</span>
                 <button class="carousel-btn" id="nextBtn">→</button>
             </div>
         </section>
